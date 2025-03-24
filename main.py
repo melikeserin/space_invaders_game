@@ -6,28 +6,28 @@ from pygame import mixer
 # Intialize the pygame
 pygame.init()
 
-# create the screen
+# ekran 
 screen = pygame.display.set_mode((800, 600))
 
-# Background
+# arkaplan
 background = pygame.image.load('background.png')
 
 # arkaplan sesi
 mixer.music.load("background.wav")
 mixer.music.play(-1)
 
-# Caption and Icon
+# caption ve ikon
 pygame.display.set_caption("Space Invader")
 icon = pygame.image.load('space.png')
 pygame.display.set_icon(icon)
 
-# Player
+# oyuncu
 playerImg = pygame.image.load('space-invaders(2).png')
 playerX = 370
 playerY = 480
 playerX_change = 0
 
-# Enemy
+# düşman
 enemyImg = []
 enemyX = []
 enemyY = []
@@ -42,7 +42,7 @@ for i in range(num_of_enemies):
     enemyX_change.append(2)
     enemyY_change.append(40)
 
-# fast enemy
+# hızlı düşman
 fast_enemyImg = []
 fast_enemyX = []
 fast_enemyY = []
@@ -57,10 +57,10 @@ for i in range(num_of_fast_enemies):
     fast_enemyX_change.append(5)
     fast_enemyY_change.append(40)
 
-# Bullet
+# mermi
 
-# Ready - You can't see the bullet on the screen
-# Fire - The bullet is currently moving
+# Ready - daha ateş falan edilmedi
+# Fire - mermi ateş edilmeye hazır durumda
 
 bulletImg = pygame.image.load('bullet(1).png')
 bulletX = 0
@@ -116,11 +116,11 @@ def isCollision(enemyX, enemyY, bulletX, bulletY):
         return False
 
 
-# Game Loop
+# oyun döngüsü
 running = True
 while running:
 
-    # RGB = Red, Green, Blue
+    # RGB şeklinde
     screen.fill((0, 0, 0))
     # Background Image
     screen.blit(background, (0, 0))
@@ -146,8 +146,6 @@ while running:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 playerX_change = 0
 
-    # 5 = 5 + -0.1 -> 5 = 5 - 0.1
-    # 5 = 5 + 0.1
 
     playerX += playerX_change
     if playerX <= 0:
