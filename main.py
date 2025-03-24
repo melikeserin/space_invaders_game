@@ -214,7 +214,7 @@ while running:
             fast_enemyY[i] = random.randint(50, 150)
         fast_enemy(fast_enemyX[i], fast_enemyY[i], i)
 
-    # Bullet Movement
+    # mermi hareketi
     if bulletY <= 0:
         bulletY = 480
         bullet_state = "ready"
