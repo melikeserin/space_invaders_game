@@ -138,7 +138,7 @@ while running:
                 if bullet_state == "ready":
                     bulletSound = mixer.Sound("laser.wav")
                     bulletSound.play()
-                    # Get the current x cordinate of the spaceship
+                    # mevcut x koordinatları
                     bulletX = playerX
                     fire_bullet(bulletX, bulletY)
 
