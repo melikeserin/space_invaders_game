@@ -3,7 +3,7 @@ import random
 import pygame
 from pygame import mixer
 
-# Intialize the pygame
+# Intialize the pygame (fix her programda yapılmalı)
 pygame.init()
 
 # ekran 
